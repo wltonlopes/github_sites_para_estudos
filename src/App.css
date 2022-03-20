@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --main-bg-color: #bbbbbb;
+  --main-bk-color1: #bbbbbb;
+  --main-bk-color2: #101010;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--main-bg-color);
+}
+ul {
+  list-style: none;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--main-bk-color2);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--main-bg-color);
+}
+header nav a {
+  padding: 10px 20px;
+  font-size: 2rem;
+  color: var(--main-bk-color1);
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+}
+header nav a:hover,
+header nav a.active {
+  background: var(--main-bk-color2);
+  color: var(--main-bk-color1);
+  transition: 0.5s ease-out;
+  letter-spacing: 2px;
+}
+body {
+  background: var(--main-bk-color2);
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1) {
+  color: var(--main-bk-color1);
+}
+section:nth-child(2) {
+  color: #101010;
+  background: var(--main-bk-color1);
+}
+section:nth-child(3) {
+  color: var(--main-bk-color1);
+}
+section:nth-child(4) {
+  color: #101010;
+  background:var(--main-bk-color1);
+}
+section:nth-child(5) {
+  color: var(--main-bk-color1);
+}
+section .container {
+  margin: 100px;
+}
+section h1 {
+  font-size: 3rem;
+  margin: 20px;
+}
+section h2 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+section .text-container {
+  display: flex;
+}
+section .text-container .text-box {
+  margin: 20px;
+  padding: 20px;
+  background: #101010;
+}
+section .text-container .text-box h3 {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container {
+    flex-direction: column;
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
